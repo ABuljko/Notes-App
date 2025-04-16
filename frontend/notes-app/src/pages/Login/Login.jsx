@@ -17,9 +17,15 @@ const handleLogin = async (e) => {
         setError("Invalid email address.");
         return;
     }
-}
+    if (!password) {
+        setError("Password cannot be empty.");
+        return;
+    }
 
-return <>
+    setError("");
+};
+
+return ( <>
         <Navbar/>
 
         <div className="flex items-center justify-center mt-28">
@@ -40,7 +46,7 @@ return <>
                         onChange={(e) => setPassword(e.target.value)}
                     />
 
-                    {error && <p className="bg-red-500 text-xs pb-1">{error}</p>}
+                    {error && <p className="text-red-500 text-xs pb-1">{error}</p>}
 
                     <button type="submit" className="btn-primary">
                         Login
@@ -55,7 +61,8 @@ return <>
                 </form>
             </div>
         </div>
-        </>;
-}
+        </>
+);
+};
 
 export default Login
