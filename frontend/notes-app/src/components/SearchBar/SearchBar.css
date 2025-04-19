@@ -37,6 +37,7 @@
     cursor: pointer;
     margin-right: 0.5rem;
     transition: color 0.3s ease;
+    padding-left:.5rem;
 }
 
 .search-clear-icon:hover {
@@ -49,7 +50,7 @@
     color: #ffffff;
     cursor: pointer;
     transition: color 0.3s ease;
-    padding-left:1rem;
+    padding-left:.25rem;
 }
 
 .search-icon:hover {

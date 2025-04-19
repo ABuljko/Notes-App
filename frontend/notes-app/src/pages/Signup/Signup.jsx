@@ -18,12 +18,16 @@ const SignUp = () => {
             setError("Name cannot be empty.");
             return;
         }
-        if (!validateEmail(email)) {
-            setError("Invalid email address.");
+        if (!email) {
+            setError("Enail cannot be empty.");
             return;
         }
         if (!password) {
             setError("Password cannot be empty.");
+            return;
+        }
+        if (!validateEmail(email)) {
+            setError("Invalid email address.");
             return;
         }
         setError("");

@@ -1,0 +1,31 @@
+/* Navbar container
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem; /* Add padding to the left and right 
+    background: linear-gradient(135deg, #4b0082, #6a5acd);
+    border-radius: 0; /* Remove rounded corners 
+    box-shadow: 0 4px 15px rgba(75, 0, 130, 0.2);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    position: fixed; /* Make it stick to the top 
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width 
+    z-index: 1000; /* Ensure it stays above other elements 
+}
+
+/* Navbar title 
+.navbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ProfileInfo container (optional, if needed for alignment) 
+.navbar .profile-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+} */

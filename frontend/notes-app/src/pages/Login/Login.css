@@ -4,12 +4,26 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    margin: 0; /* Remove any default margins */
+    padding: 0; /* Remove any default paddings */
     background: linear-gradient(135deg, #4b0082, #6a5acd, #8a2be2);
     background-size: 400% 400%;
     animation: gradientAnimation 10s ease infinite;
     font-family: 'Poppins', sans-serif;
     position: relative;
-    overflow: hidden;
+    overflow: hidden; /* Prevent scrollbars */
+    width: 100vw; /* Ensure it spans the full width of the viewport */
+    height: 100vh; /* Ensure it spans the full height of the viewport */
+    box-sizing: border-box; /* Include padding and borders in width/height */
+}
+
+/* Remove scrollbars globally */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Disable scrolling */
+    width: 100vw;
+    height: 100vh;
 }
 
 /* Animated gradient background */
