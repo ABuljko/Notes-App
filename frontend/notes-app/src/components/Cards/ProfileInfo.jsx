@@ -16,4 +16,4 @@ const ProfileInfo = ({onLogout}) => {
     );
 };
 
-export default ProfileInfo
+export default ProfileInfo;

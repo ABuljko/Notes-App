@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import PasswordInput from "../../components/Input/PasswordInput";
-import Navbar from "../../components/navbar/navbar";
+import Navbar from "../../components/Navbar/Navbar";
 import { validateEmail } from "../../utils/helper";
 
 const SignUp = () => {
@@ -74,4 +74,4 @@ const SignUp = () => {
     );
 };
 
-export default SignUp
+export default SignUp;

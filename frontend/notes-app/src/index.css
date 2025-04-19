@@ -40,4 +40,14 @@
         .btn-primary:hover {
         background-color: #2563eb; /* Equivalent to hover:bg-blue-600 */
     }
+
+    .icon-btn{
+        font-size: 1.25rem; /* Equivalent to text-xl */
+        color: #cbd5e1; /* Equivalent to text-slate-300 */
+        cursor: pointer;
+        transition: color 0.3s;
+        }
+        .icon-btn:hover {
+        color: #2563eb; /* Equivalent to text-primary */
+    }
 }
