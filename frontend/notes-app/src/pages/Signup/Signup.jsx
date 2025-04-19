@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import PasswordInput from "../../components/Input/PasswordInput";
 import Navbar from "../../components/Navbar/Navbar";
 import { validateEmail } from "../../utils/helper";
+import "./SignUp.css"; // Import the new CSS file
 
 const SignUp = () => {
-
-    const[name, setName] = useState("");
-    const[email, setEmail] = useState("");
-    const[password, setPassword] = useState("");
-    const[error, setError] = useState(null);
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState(null);
 
     const handleSignUp = async (e) => {
         e.preventDefault();
@@ -28,49 +28,54 @@ const SignUp = () => {
         }
         setError("");
     };
+
     return (
         <>
-        <Navbar />
+            <Navbar />
+            <div className="signup-page">
+                <div className="signup-card">
+                    <form onSubmit={handleSignUp}>
+                        <h2 className="signup-title">Create Account</h2>
+                        <p className="signup-subtitle">Join us and start your journey</p>
 
-        <div className="flex items-center justify-center mt-28">
-            <div className="w-96 border rounded bg-white px-7 py-10">
-                <form onSubmit={handleSignUp}>
-                    <h4 className="text-2xl mb-7">SignUp</h4>
-
-                    <input 
-                        type="text" 
-                        placeholder="Name" 
-                        className="input-box"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
+                        <input
+                            type="text"
+                            placeholder="Name"
+                            className="signup-input"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
                         />
-                        <input 
-                        type="text" 
-                        placeholder="Email" 
-                        className="input-box"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+
+                        <input
+                            type="text"
+                            placeholder="Email"
+                            className="signup-input"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
-                        <PasswordInput 
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
 
-{error && <p className="text-red-500 text-xs pb-1">{error}</p>}
+                        <PasswordInput
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            className="signup-input"
+                        />
 
-<button type="submit" className="btn-primary">
-    Create Account
-</button>
+                        {error && <p className="signup-error">{error}</p>}
 
-<p className="text-sm text-center mt-4">
-    Already have an account?{""}
-    <Link to="/login" className="font-medium text-primary underline">
-    Login</Link>
-</p>
+                        <button type="submit" className="signup-button">
+                            Create Account
+                        </button>
+
+                        <p className="signup-footer">
+                            Already have an account?{" "}
+                            <Link to="/login" className="signup-link">
+                                Login
+                            </Link>
+                        </p>
                     </form>
-                    </div>
                 </div>
-    </>
+            </div>
+        </>
     );
 };
 

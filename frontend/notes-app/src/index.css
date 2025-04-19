@@ -50,4 +50,9 @@
         .icon-btn:hover {
         color: #2563eb; /* Equivalent to text-primary */
     }
+
+    .input-label{
+        font-size: 0.75rem; /* Equivalent to text-xs */
+        color: #94a3b8; /* Equivalent to text-slate-400 */
+    }
 }
