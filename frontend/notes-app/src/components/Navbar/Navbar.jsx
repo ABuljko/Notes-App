@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import ProfileInfo from "../Cards/ProfileInfo"
 import { useNavigate } from "react-router-dom";
 import SearchBar from "../SearchBar/SearchBar";
