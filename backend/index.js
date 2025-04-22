@@ -1,6 +1,12 @@
+require('dotenv').config();
+
+const mongoose = require('mongoose');
+const config = require('./config.json');
+
+mongoose.connect(config.connectionString);
+
 const express = require('express');
 const cors = require('cors');
-const e = require('express');
 const app = express();
 
 app.use(express.json());
